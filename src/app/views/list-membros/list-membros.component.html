@@ -1,0 +1,134 @@
+<mat-tab-group mat-align-tabs="start">
+    <mat-tab label="Membros">
+
+        <table mat-table [dataSource]="listaMembros" class="mat-elevation-z8">
+
+            <!--- Note that these columns can be defined in any order.
+                  The actual rendered columns are set as a property on the row definition" -->
+
+            <!-- Position Column -->
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> No. </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.position}} </td>
+            </ng-container>
+
+            <!-- Name Column -->
+            <ng-container matColumnDef="nome">
+                <th mat-header-cell *matHeaderCellDef> Nome </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.nome}} </td>
+            </ng-container>
+
+            <!-- Weight Column -->
+            <ng-container matColumnDef="telefone">
+                <th mat-header-cell *matHeaderCellDef> telefone </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.telefone}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="naturalidade">
+                <th mat-header-cell *matHeaderCellDef> naturalidade </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.naturalidade}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="estado_civil">
+                <th mat-header-cell *matHeaderCellDef> estado_civil </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.estado_civil}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="nome_conjuge">
+                <th mat-header-cell *matHeaderCellDef> nome_conjuge </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.nome_conjuge}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="nome_pai">
+                <th mat-header-cell *matHeaderCellDef> nome_pai </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.nome_pai}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="nome_mae">
+                <th mat-header-cell *matHeaderCellDef> nome_mae </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.nome_mae}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="grau_escolaridade">
+                <th mat-header-cell *matHeaderCellDef> grau_escolaridade </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.grau_escolaridade}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="profissao">
+                <th mat-header-cell *matHeaderCellDef> profissao </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.profissao}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="endereco">
+                <th mat-header-cell *matHeaderCellDef> endereco </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.endereco}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="cidade">
+                <th mat-header-cell *matHeaderCellDef> cidade </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.cidade}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="cep">
+                <th mat-header-cell *matHeaderCellDef> cep </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.cep}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="batizado_aguas">
+                <th mat-header-cell *matHeaderCellDef> batizado_aguas </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.batizado_aguas}} </td>
+            </ng-container>
+
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="funcaoMinisterial">
+                <th mat-header-cell *matHeaderCellDef> funcaoMinisterial </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.funcaoMinisterial}} </td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="batizado_Espirito_Santo">
+                <th mat-header-cell *matHeaderCellDef> batizado_Espirito_Santo </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.batizado_Espirito_Santo}} </td>
+            </ng-container>
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="data_nascimento">
+                <th mat-header-cell *matHeaderCellDef> data_nascimento </th>
+                <td mat-cell *matCellDef="let membro"> {{membro.data_nascimento}} </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+
+    </mat-tab>
+    <mat-tab label="Agenda">
+        <mat-card class="example-card" fxFlex="0 1 calc(33.3% - 11px)" fxFlex.lt-md="0 1 calc(50% - 11px)" fxFlex.lt-sm="100%">
+            <mat-card-header class="mat-card-title">
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>316 Teens</mat-card-title>
+                <mat-card-subtitle>Clube</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="../../../assets/image/clube316teens.jpg" alt="Photo 316 Teens Club">
+            <mat-card-content>
+                <p>
+                    O Clube 3.16 Teens é o nome dado ao ministério de adolescentes da nossa igreja. Faz referência ao evangelho de João 3.16 que é o textuário da Bíblia.
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="Tesouraria">Content 3</mat-tab>
+</mat-tab-group>

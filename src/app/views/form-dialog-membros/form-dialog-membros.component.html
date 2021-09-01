@@ -1,0 +1,96 @@
+<h1 mat-dialog-title>Novo Membro</h1>
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="formularioMembro">
+        <mat-form-field class="example-full-width">
+            <mat-label>Nome:</mat-label>
+            <input matInput placeholder="" formControlName="nome" name="nome">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Telefone</mat-label>
+            <input matInput placeholder="" formControlName="telefone" name="telefone">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>naturalidade</mat-label>
+            <input matInput placeholder="" formControlName="naturalidade" name="naturalidade">
+        </mat-form-field>
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>estado_civil</mat-label>
+            <input matInput placeholder="" formControlName="estado_civil" name="estado_civil">
+        </mat-form-field>
+        <ng-template>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>nome_conjuge</mat-label>
+                <input matInput placeholder="" formControlName="nome_conjuge" name="nome_conjuge">
+            </mat-form-field>
+        </ng-template>
+
+
+        <mat-form-field class="example-full-width">
+            <mat-label>nome_pai</mat-label>
+            <input matInput placeholder="" formControlName="nome_pai" name="nome_pai">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>nome_mae</mat-label>
+            <input matInput placeholder="" formControlName="nome_mae" name="nome_mae">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>grau_escolaridade</mat-label>
+            <input matInput placeholder="" formControlName="grau_escolaridade" name="grau_escolaridade">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>profissao</mat-label>
+            <input matInput placeholder="" formControlName="profissao" name="profissao">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>endereco</mat-label>
+            <input matInput placeholder="" formControlName="endereco" name="endereco">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>cidade</mat-label>
+            <input matInput placeholder="" formControlName="cidade" name="cidade">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>cep</mat-label>
+            <input matInput placeholder="" formControlName="cep" name="cep">
+        </mat-form-field>
+
+        <section class="example-section">
+            <label class="example-margin">Batizado nas águas?:</label>
+            <mat-checkbox class="example-margin" checkbox-configurable-example="sim">Sim</mat-checkbox>
+            <mat-checkbox class="example-margin" checkbox-configurable-example="nao">Não</mat-checkbox>
+        </section>
+
+        <section class="example-section">
+            <label class="example-margin">Batizado com Espírito Santo?:</label>
+            <mat-checkbox class="example-margin" checkbox-configurable-example="sim">Sim</mat-checkbox>
+            <mat-checkbox class="example-margin" checkbox-configurable-example="nao">Não</mat-checkbox>
+        </section>
+
+        <div fxLayout="row wrap">
+            <div fxFlex="50" fxFill fxLayoutAlign="start center">
+                <mat-form-field>
+                    <mat-label>Data de Nascimento</mat-label>
+                    <input matInput [matDatepicker]="picker" formControlName="data_nascimento">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="cancel()">Cancelar</button>
+    <button mat-raised-button color="primary" (click)="createMembro()">Adicionar</button>
+</div>
